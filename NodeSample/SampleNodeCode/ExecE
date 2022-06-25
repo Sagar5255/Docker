@@ -1,0 +1,9 @@
+docker compose up --detach
+docker-compose ps
+docker-compose stop
+docker-compose down 
+
+docker container stop $(docker container ls -aq)
+docker container rm $(docker container ls -aq)
+
+docker image prune -a
