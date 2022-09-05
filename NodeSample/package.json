@@ -2,9 +2,12 @@
   "name": "nodesample",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "./SampleNodeCode/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node main",
+    "dev": "nodemon main",
+    "docker-compose-down": "docker-compose -f './docker-compose.yaml' down",
+    "docker-compose-up:dev": "npm run docker-compose-down; npm run docker-compose-up:dev; docker-compose logs -f api-dev"
   },
   "keywords": [],
   "author": "",
